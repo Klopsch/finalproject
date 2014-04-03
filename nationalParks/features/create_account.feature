@@ -10,6 +10,6 @@ Scenario: create an account
 	And I fill in "Password confirmation" with "password"
 	And I press "Sign up"
 	Then I should be on the home page
-	And I should see "You are logged in"
+	And I should see "Welcome! You have signed up successfully."
 
 
