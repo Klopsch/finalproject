@@ -1,4 +1,6 @@
 NationalParks::Application.routes.draw do
+  resources :parks
+
   get "pages/index"
   devise_for :users
   root :to => "pages#index"
