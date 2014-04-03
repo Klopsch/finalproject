@@ -14,5 +14,5 @@ end
 users = [{ email: 'happy@fake.com', password: 'password' }]
 
 users.each do |user|
-  User.create!(user)
+  Users.create!(user)
 end

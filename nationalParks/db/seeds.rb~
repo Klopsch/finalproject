@@ -12,3 +12,7 @@ parks.each do |park|
 end
 
 users = [{ email: 'happy@fake.com', password: 'password' }]
+
+users.each do |user|
+  User.create!(user)
+end
