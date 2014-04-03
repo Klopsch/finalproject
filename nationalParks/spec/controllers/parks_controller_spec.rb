@@ -23,7 +23,7 @@ describe ParksController do
   # This should return the minimal set of attributes required to create a valid
   # Park. As you add validations to Park, be sure to
   # adjust the attributes here as well.
-  let(:valid_attributes) { { "parkname" => "MyString" } }
+  let(:valid_attributes) { {  } }
 
   # This should return the minimal set of values that should be in the session
   # in order to pass any filters (e.g. authentication) defined in
@@ -85,14 +85,14 @@ describe ParksController do
       it "assigns a newly created but unsaved park as @park" do
         # Trigger the behavior that occurs when invalid params are submitted
         Park.any_instance.stub(:save).and_return(false)
-        post :create, {:park => { "parkname" => "invalid value" }}, valid_session
+        post :create, {:park => {  }}, valid_session
         assigns(:park).should be_a_new(Park)
       end
 
       it "re-renders the 'new' template" do
         # Trigger the behavior that occurs when invalid params are submitted
         Park.any_instance.stub(:save).and_return(false)
-        post :create, {:park => { "parkname" => "invalid value" }}, valid_session
+        post :create, {:park => {  }}, valid_session
         response.should render_template("new")
       end
     end
@@ -106,8 +106,8 @@ describe ParksController do
         # specifies that the Park created on the previous line
         # receives the :update_attributes message with whatever params are
         # submitted in the request.
-        Park.any_instance.should_receive(:update).with({ "parkname" => "MyString" })
-        put :update, {:id => park.to_param, :park => { "parkname" => "MyString" }}, valid_session
+        Park.any_instance.should_receive(:update).with({ "these" => "params" })
+        put :update, {:id => park.to_param, :park => { "these" => "params" }}, valid_session
       end
 
       it "assigns the requested park as @park" do
@@ -128,7 +128,7 @@ describe ParksController do
         park = Park.create! valid_attributes
         # Trigger the behavior that occurs when invalid params are submitted
         Park.any_instance.stub(:save).and_return(false)
-        put :update, {:id => park.to_param, :park => { "parkname" => "invalid value" }}, valid_session
+        put :update, {:id => park.to_param, :park => {  }}, valid_session
         assigns(:park).should eq(park)
       end
 
@@ -136,7 +136,7 @@ describe ParksController do
         park = Park.create! valid_attributes
         # Trigger the behavior that occurs when invalid params are submitted
         Park.any_instance.stub(:save).and_return(false)
-        put :update, {:id => park.to_param, :park => { "parkname" => "invalid value" }}, valid_session
+        put :update, {:id => park.to_param, :park => {  }}, valid_session
         response.should render_template("edit")
       end
     end
