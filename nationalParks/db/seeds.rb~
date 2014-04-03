@@ -5,8 +5,10 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-parks = [{ parkname: 'fakeland', location: 'No Where', info: 'Nothing to see here' }]
+parks = [{ parkname: 'Fakeland', location: 'No Where', info: 'Nothing to see here' }]
 
 parks.each do |park|
   Park.create!(park)
 end
+
+users = [{ email: 'happy@fake.com', password: 'password' }]

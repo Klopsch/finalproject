@@ -10,3 +10,9 @@ parks = [{ parkname: 'Fakeland', location: 'No Where', info: 'Nothing to see her
 parks.each do |park|
   Park.create!(park)
 end
+
+users = [{ email: 'happy@fake.com', password: 'password' }]
+
+users.each do |user|
+  User.create!(user)
+end
