@@ -1,0 +1,23 @@
+%h1 Listing parks
+
+%table
+  %tr
+    %th Parkname
+    %th Location
+    %th Info
+    %th
+    %th
+    %th
+
+  - @parks.each do |park|
+    %tr
+      %td= park.parkname
+      %td= park.location
+      %td= link_to "More about #{park.parkname}", park_path(park)
+      %td= link_to 'Show', park
+      %td= link_to 'Edit', edit_park_path(park)
+      %td= link_to 'Destroy', park, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Park', new_park_path

@@ -2,7 +2,7 @@
 
 %table#parks
   %thead
-    - @parks.each do |park|
+    - @park.each do |park|
       %tr
         %td= park.parkname
         %td= park.location
