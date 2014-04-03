@@ -69,6 +69,6 @@ class ParksController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def park_params
-      params.require(:park).permit(:parkname, :location, :info)
+      params[:park]
     end
 end

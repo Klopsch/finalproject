@@ -1,1 +1,1 @@
-json.extract! @park, :parkname, :location, :info, :created_at, :updated_at
+json.extract! @park, :created_at, :updated_at
