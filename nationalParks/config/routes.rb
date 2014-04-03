@@ -1,9 +1,9 @@
 NationalParks::Application.routes.draw do
   resources :parks
 
-  get "pages/index"
+  get "parks/index"
   devise_for :users
-  root :to => "pages#index"
+  root :to => "parks#index"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
