@@ -1,4 +1,6 @@
 NationalParks::Application.routes.draw do
+  resources :microposts
+
   resources :parks
 
   get "parks/index"
