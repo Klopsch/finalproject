@@ -11,7 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140403021417) do
+ActiveRecord::Schema.define(version: 20140409231415) do
+
+  create_table "microposts", force: true do |t|
+    t.string   "content"
+    t.integer  "user_id"
+    t.integer  "park_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "parks", force: true do |t|
     t.string   "parkname"
@@ -23,6 +31,7 @@ ActiveRecord::Schema.define(version: 20140403021417) do
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
+    t.string   "string",                 default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
