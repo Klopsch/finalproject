@@ -40,15 +40,31 @@ table#parks {
   width: 100%;
   border-bottom: 2px solid black;
 }
+
 table#parks th {
   border: 2px solid white;
   font-weight: bold;
   background-color: gray;
 }
+
 table#parks th, table#parks td {
   padding: 4px;
   text-align: left;
 }
+
+ul#parkheading{
+  margin: 10px;
+  border-collapse: collapse;
+  width: 100%;
+  border-bottom: 1px solid gray;
+}
+
+ul#parkdetails{
+  margin: 10px;
+  border-collapse: collapse;
+  width: 100%;
+}
+
 /* typography */
 
 h1, h2, h3, h4, h5, h6 {
