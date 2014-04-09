@@ -12,10 +12,12 @@
   %b Info:
   = @park.info
 
-<<<<<<< HEAD
-= link_to 'Edit', edit_park_path(@park)
-\|
-= link_to 'Back', parks_path
+%br
+
+%ul#parkdetails
+ = link_to 'Edit', edit_park_path(@park)
+ \|
+ = link_to 'Back', parks_path
 
 %table#microposts
   %thead
@@ -31,11 +33,5 @@
         %td= post.user_id
 
 = link_to 'Add new post', new_micropost_path
-=======
-%br
 
-%ul#parkdetails
- = link_to 'Edit', edit_park_path(@park)
- \|
- = link_to 'Back', parks_path
->>>>>>> 03a27ec1474405fa3c23b6f59f6048dcdabddd62
+
