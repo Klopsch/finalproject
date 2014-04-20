@@ -37,7 +37,7 @@ div#main {
 table#parks {
   margin: 10px;
   border-collapse: collapse;
-  width: 100%;
+  width: 95%;
   border-bottom: 2px solid black;
 }
 
@@ -63,6 +63,13 @@ ul#parkdetails{
   margin: 10px;
   border-collapse: collapse;
   width: 100%;
+}
+
+ul#links{
+  margin: 10px;
+  border-collapse: collapse;
+  width: 100%;
+  border-bottom: 1px solid gray;
 }
 
 /* typography */

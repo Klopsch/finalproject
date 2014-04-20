@@ -14,7 +14,7 @@
 
 %br
 
-%ul#parkdetails
+%ul#links
  = link_to 'Edit', edit_park_path(@park)
  \|
  = link_to 'Back', parks_path
@@ -22,13 +22,11 @@
 %table#microposts
  %thead
   %tr
-   %th Park
    %th Content
    %th User
  %tbody
   - @microposts.each do |post|
    %tr
-    %td= post.park_id
     %td= post.content
     %td= post.user_id
 
