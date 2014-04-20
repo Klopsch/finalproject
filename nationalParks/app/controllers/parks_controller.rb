@@ -10,6 +10,7 @@ class ParksController < ApplicationController
   # GET /parks/1
   # GET /parks/1.json
   def show
+    session[:last_park] = @park
     @microposts = Micropost.all
   end
 
