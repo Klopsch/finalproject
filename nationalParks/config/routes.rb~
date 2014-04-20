@@ -1,8 +1,5 @@
-NationalParks::Application.routes.draw do
+NationalParks::Application.routes.draw do  resources :parks
   resources :microposts
-  resources :users
-  resources :parks
-
   get "parks/index"
   devise_for :users
   root :to => "parks#index"
