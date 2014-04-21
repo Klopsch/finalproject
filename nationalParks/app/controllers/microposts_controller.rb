@@ -69,6 +69,7 @@ class MicropostsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def micropost_params
-      params.require(:micropost).permit(:content).merge(user: current_user).merge(park_id: session[:last_park])
+      park = session[:last_park]
+      params.require(:micropost).permit(:content).merge(user: current_user, park_id: park)
     end
 end
