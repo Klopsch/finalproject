@@ -5,7 +5,7 @@ Feature: User sign up, sign in, and log out
 	And sign in
 	And logout
 
-Scenario: create an account
+Scenario: sign in, sign out feature
 	Given I am on the home page 
 	And I follow "Sign up"
 	Then I should be on the create account page

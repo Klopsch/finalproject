@@ -3,7 +3,7 @@ Feature: User edit profile
 	As a user
 	I want to edit my profile
 
-Scenario: create an account
+Scenario: User edit profile
 	Given I am on the home page 
 	And I follow "Sign up"
 	Then I should be on the create account page
