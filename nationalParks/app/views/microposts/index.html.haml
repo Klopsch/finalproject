@@ -3,6 +3,7 @@
 %table
   %tr
     %th Content
+    %th Park
     %th User
     %th
     %th
@@ -11,6 +12,7 @@
   - @microposts.each do |micropost|
     %tr
       %td= micropost.content
+      %td= micropost.park_id
       %td= micropost.user
       %td= link_to 'Show', micropost
       %td= link_to 'Edit', edit_micropost_path(micropost)
