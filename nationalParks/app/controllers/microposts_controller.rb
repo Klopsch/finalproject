@@ -1,4 +1,5 @@
 class MicropostsController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_micropost, only: [:show, :edit, :update, :destroy]
 
   # GET /microposts
@@ -25,7 +26,6 @@ class MicropostsController < ApplicationController
   # POST /microposts.json
   def create
     @micropost = Micropost.new(micropost_params)
-
     respond_to do |format|
       if @micropost.save
         format.html { redirect_to @micropost, notice: 'Micropost was successfully created.' }
@@ -69,6 +69,7 @@ class MicropostsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def micropost_params
-      params.require(:micropost).permit(:content, :user)
+      params.require(:micropost).permit(:content).merge(user: current_user)
+      #params["micropost"]["park_id"] = session[:last_park]
     end
 end

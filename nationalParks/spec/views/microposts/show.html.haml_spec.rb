@@ -4,6 +4,7 @@ describe "microposts/show" do
   before(:each) do
     @micropost = assign(:micropost, stub_model(Micropost,
       :content => "Content",
+      :park_id => 1,
       :user => "User"
     ))
   end
@@ -12,6 +13,7 @@ describe "microposts/show" do
     render
     # Run the generator again with the --webrat flag if you want to use webrat matchers
     rendered.should match(/Content/)
+    rendered.should match(/1/)
     rendered.should match(/User/)
   end
 end
