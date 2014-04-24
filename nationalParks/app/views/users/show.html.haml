@@ -4,6 +4,9 @@
   %li
     Email:
     = current_user.email
+  %li
+    Username:
+    = current_user.username
 
 %h3 Parks Visited:
 %table#visited_parks
@@ -11,6 +14,6 @@
     %tr
       %th Park Name: Location
   %tbody
-    - current_user.visited_parks.split(", ") do |park|
+    - current_user.visited_parks.split(", ").each do |park|
       %tr
         %td= park
