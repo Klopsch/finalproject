@@ -5,4 +5,9 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
   end
 
+  def avp
+    @user = current_user
+    @user.visited_parks += (current_park.parkname + ": " + current_park.location)
+  end
+
 end

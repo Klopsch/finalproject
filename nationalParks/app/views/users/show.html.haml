@@ -1,1 +1,16 @@
-@user.name
+%h1 Profile of #{current_user.username}
+
+%ul#details
+  %li
+    Email:
+    = current_user.email
+
+%h3 Parks Visited:
+%table#visited_parks
+  %thead
+    %tr
+      %th Park Name: Location
+  %tbody
+    - current_user.visited_parks.split(", ") do |park|
+      %tr
+        %td= park
