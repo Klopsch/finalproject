@@ -1,3 +1,6 @@
 class Park < ActiveRecord::Base
-  has_many :microposts
+	validates_presence_of :parkname
+	validates_presence_of :location
+	validates_presence_of :info
+	has_many :microposts
 end
