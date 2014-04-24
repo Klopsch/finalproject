@@ -18,17 +18,18 @@ require 'spec_helper'
 # Message expectations are only used when there is no simpler way to specify
 # that an instance is receiving a specific message.
 
-describe MicropostsController, :type => :controller  do
+describe MicropostsController  do
 
   # This should return the minimal set of attributes required to create a valid
   # Micropost. As you add validations to Micropost, be sure to
   # adjust the attributes here as well.
-  let(:valid_attributes) { { "content" => "MyString" } }
+  
+  #let(:valid_attributes) { { "content" => "MyString" } }
 
   # This should return the minimal set of values that should be in the session
   # in order to pass any filters (e.g. authentication) defined in
   # MicropostsController. Be sure to keep this updated too.
-  let(:valid_session) { {} }
+  #let(:valid_session) { {} }
 
   describe "GET index" do
     it "assigns all microposts as @microposts" do
