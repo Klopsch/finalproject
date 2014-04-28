@@ -1,5 +1,14 @@
 %p#notice= notice
 
+%ul#links
+ = link_to 'Edit', edit_park_path(@park)
+ \|
+ = link_to 'Back', parks_path
+ \|
+ = link_to 'Add to visited parks', users_avp_path(@park)
+
+%ul#lines
+
 %ul#parkheading
  %li
   %b Parkname:
@@ -7,19 +16,14 @@
  %li
   %b Location:
   = @park.location
+%ul#lines
 %ul#parkdetails
  %li
   %b Info:
   = @park.info
-
-%br
-
-%ul#links
- = link_to 'Edit', edit_park_path(@park)
- \|
- = link_to 'Back', parks_path
- \|
- = link_to 'Add to visited parks', users_avp_path(@park)
+%ul#lines
+ %h3#posttitle
+  Microposts
 
 %table#microposts
  %thead
@@ -31,6 +35,7 @@
    %tr
     %td= post.content
     %td= post.user
+%ul#lines
 
 = link_to 'Add new post', new_micropost_path
 

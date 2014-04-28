@@ -34,6 +34,13 @@ div#main {
   padding: 0 20px 20px;
 }
 
+table#microposts {
+  margin: 10px;
+  border-collapse: collapse;
+  width: 95%;
+  text-align: center;
+}
+
 table#parks {
   margin: 10px;
   border-collapse: collapse;
@@ -52,24 +59,28 @@ table#parks th, table#parks td {
   text-align: left;
 }
 
-ul#parkheading{
-  margin: 10px;
-  border-collapse: collapse;
-  width: 100%;
+ul#lines{
   border-bottom: 1px solid gray;
 }
 
+ul#parkheading{
+  margin: 30px;
+  border-collapse: collapse;
+  width: 100%;
+}
+
 ul#parkdetails{
-  margin: 10px;
+  margin: 30px;
   border-collapse: collapse;
   width: 100%;
 }
 
 ul#links{
-  margin: 10px;
-  border-collapse: collapse;
+  text-align: right;
   width: 100%;
-  border-bottom: 1px solid gray;
+}
+h3#posttitle{
+  text-align:center;
 }
 
 /* typography */
