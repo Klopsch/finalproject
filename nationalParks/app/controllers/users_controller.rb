@@ -7,7 +7,9 @@ class UsersController < ApplicationController
 
   def avp
     @user = current_user
-    @user.visited_parks += (current_park.parkname + ": " + current_park.location)
+    @park = Park.find(params[:id])
+    current_user.visited_parks += ", " + @park
+    #@user.visited_parks += (", " + @park.parkname + ": " + @park.location)
   end
 
 end

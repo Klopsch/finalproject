@@ -15,5 +15,6 @@
       %th Park Name: Location
   %tbody
     - current_user.visited_parks.split(", ").each do |park|
+      - @parkname = park.split(": ")
       %tr
-        %td= park
+        %td= link_to "#{park}", park_path(Park.find(@parkname[0]))
