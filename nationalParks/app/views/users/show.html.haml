@@ -7,6 +7,9 @@
   %li
     Username:
     = current_user.username
+  %li
+    Temp park list:
+    = current_user.visited_parks
 
 %h3 Parks Visited:
 %table#visited_parks
@@ -15,6 +18,6 @@
       %th Park Name: Location
   %tbody
     - current_user.visited_parks.split(", ").each do |park|
-      - @parkname = park.split(": ")
+      - name = park.split(": ")
       %tr
-        %td= link_to "#{park}", park_path(Park.find(@parkname[0]))
+        %td= link_to "#{park}", park_path(:name => name[0])

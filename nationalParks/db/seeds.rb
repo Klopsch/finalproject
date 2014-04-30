@@ -11,7 +11,7 @@ parks.each do |park|
   Park.create!(park)
 end
 
-users = [{ email: 'happy@fake.com', username: 'Happy', password: 'password', visited_parks: 'Fakeland: Nowhere, Rocky Mountain: Colorado' }]
+users = [{ email: 'happy@fake.com', username: 'Happy', password: 'password', visited_parks: '' }]
 
 users.each do |user|
   User.create!(user)
