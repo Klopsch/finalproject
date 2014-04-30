@@ -31,7 +31,7 @@ class UsersController < ApplicationController
     temp_string = ''
     @user.visited_parks.split("; ").each do |park|
       if(park != params[:remove_from_visited_parks])
-        if(temp_string = '')
+        if(temp_string == '')
           temp_string += park
         else
           temp_string += "; " + park
