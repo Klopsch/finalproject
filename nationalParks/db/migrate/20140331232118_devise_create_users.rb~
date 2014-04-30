@@ -31,7 +31,8 @@ class DeviseCreateUsers < ActiveRecord::Migration
       # t.datetime :locked_at
 
       t.timestamps
-      t.string :visited_parks
+      t.string :username
+      t.Array :visited_parks
     end
 
     add_index :users, :email,                unique: true

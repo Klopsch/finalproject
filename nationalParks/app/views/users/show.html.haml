@@ -17,7 +17,7 @@
     %tr
       %th Park Name: Location
   %tbody
-    - current_user.visited_parks.split(", ").each do |park|
+    - current_user.visited_parks.split("; ").each do |park|
       - name = park.split(": ")
       %tr
         %td= link_to "#{park}", park_path(:name => name[0])
