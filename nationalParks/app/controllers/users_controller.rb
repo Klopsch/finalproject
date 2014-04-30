@@ -3,13 +3,10 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-  end
-
-  def avp
-    @user = current_user
-    @park = Park.find(params[:id])
-    current_user.visited_parks += ", " + @park
-    #@user.visited_parks += (", " + @park.parkname + ": " + @park.location)
+    if(params[:add_to_visited_parks] != nil)
+      @user.visited_parks += (", " + params[:add_to_visited_parks])
+      @user.save
+    end
   end
 
 end

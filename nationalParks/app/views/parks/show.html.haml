@@ -19,7 +19,7 @@
  \|
  = link_to 'Back', parks_path
  \|
- = link_to 'Add to visited parks', users_avp_path(@park)
+ = link_to 'Add to visited parks', profiles_path(:id => current_user.id, :add_to_visited_parks => @park.parkname + ": " + @park.location)
 
 %table#microposts
  %thead

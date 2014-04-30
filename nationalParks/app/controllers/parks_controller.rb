@@ -10,6 +10,9 @@ class ParksController < ApplicationController
   # GET /parks/1
   # GET /parks/1.json
   def show
+    if(params[:name] != nil)
+      @park = find_by_name(params[:name])
+    end
     session[:last_park] = @park
     @microposts = Micropost.all
   end
@@ -60,6 +63,14 @@ class ParksController < ApplicationController
     respond_to do |format|
       format.html { redirect_to parks_url }
       format.json { head :no_content }
+    end
+  end
+
+  def find_by_name(parkname)
+    Park.all.each do |park|
+      if(park.parkname == parkname)
+        return park
+      end
     end
   end
 
