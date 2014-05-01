@@ -45,8 +45,9 @@
     %tr
      %td= post.content
      %td= username[0]
-%ul#lines
+%ul#line
 
-= link_to 'Add new post', new_micropost_path
+%ul#newpost
+ = link_to 'Add new post', new_micropost_path, id: "newPost"
 
 
