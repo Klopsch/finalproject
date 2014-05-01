@@ -1,12 +1,9 @@
-%h1 Profile of #{current_user.username}
+%h1 Profile of #{@user.username}
 
 %ul#details
   %li
-    Email:
-    = current_user.email
-  %li
     Username:
-    = current_user.username
+    = @user.email.split("@")[0]
 
 %h3 Parks Visited:
 %table#visited_parks
@@ -14,8 +11,8 @@
     %tr
       %th Park Name: Location
   %tbody
-    - if(current_user.visited_parks != nil)
-      - current_user.visited_parks.split("; ").each do |park|
+    - if(@user.visited_parks != nil)
+      - @user.visited_parks.split("; ").each do |park|
         - name = park.split(": ")
         %tr
           %td= link_to "#{park}", park_path(:name => name[0])
