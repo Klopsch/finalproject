@@ -41,11 +41,11 @@
    %th Tag
  %tbody
   - @microposts.each do |post|
-   - username = User.find(post.user).email.split("@")
+   - username = post.user.split("@")[0]
    - if(post.park_id == session[:last_park])
     %tr
      %td= post.content
-     %td= username[0]
+     %td= link_to #{username}, profile_path(User.find(post.user))
      %td= post.tag
 %ul#lines
 
