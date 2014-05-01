@@ -11,8 +11,12 @@
     = f.text_field :content
   .field
     = radio_button_tag(:tag, "Weather")
-    = label_tag(:tag, "weather")
+    = label_tag(:tag, "Weather")
     = radio_button_tag(:tag, "Camping")
     = label_tag(:tag, "Camping")
+    = radio_button_tag(:tag, "Hiking")
+    = label_tag(:tag, "Hiking")
+    = radio_button_tag(:tag, "Traffic")
+    = label_tag(:tag, "Traffic")
   .actions
     = f.submit 'Save'
