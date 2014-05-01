@@ -42,22 +42,12 @@
    %th Tag
  %tbody
   - @microposts.each do |post|
-<<<<<<< HEAD
    - username = User.find(post.user).email.split("@")[0]
    %tr
     %td= post.content
     %td= link_to username, profiles_path(User.find(post.user))
     %td= post.tag
 %ul#lines
-
-=======
-   - username = User.find(post.user).email.split("@")
-   - if(post.park_id == session[:last_park])
-    %tr
-     %td= post.content
-     %td= username[0]
-%ul#lines
->>>>>>> Alice
 
 %ul#newpost
  = link_to 'Add new post', new_micropost_path, id: "newPost"
