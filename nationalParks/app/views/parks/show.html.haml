@@ -28,7 +28,8 @@
  - if user_signed_in?
   = link_to 'Remove from visited parks', profiles_path(:id => current_user.id, :remove_from_visited_parks => @park.parkname + ": " + @park.location)
  - else
-  = link_to 'Remove from visited parks', new_user_registration_path
+  = link_to 'Remove from visited parks ', new_user_registration_path
+  
 
 %ul#lines
  %h3#posttitle
