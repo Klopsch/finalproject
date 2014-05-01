@@ -4,12 +4,9 @@
   %b Content:
   = @micropost.content
 %p
-  %b Park:
-  = @micropost.park_id
+  %b Tag:
+  = @micropost.tag
 %p
-  %b User:
-  = @micropost.user
-
 = link_to 'Edit', edit_micropost_path(@micropost)
 \|
 = link_to 'Back', park_path(session[:last_park])

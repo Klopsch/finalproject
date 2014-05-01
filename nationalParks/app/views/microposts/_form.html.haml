@@ -9,5 +9,10 @@
   .field
     = f.label :content
     = f.text_field :content
+  .field
+    = radio_button_tag(:tag, "Weather")
+    = label_tag(:tag, "weather")
+    = radio_button_tag(:tag, "Camping")
+    = label_tag(:tag, "Camping")
   .actions
     = f.submit 'Save'

@@ -12,6 +12,9 @@ class UsersController < ApplicationController
 
   def add
     already_added = false
+    if(@user.visited_parks == nil)
+      @user.visited_parks = ''
+    end
     @user.visited_parks.split("; ").each do |park|
       if(park == params[:add_to_visited_parks])
         already_added = true
@@ -29,6 +32,9 @@ class UsersController < ApplicationController
 
   def remove
     temp_string = ''
+    if(@user.visited_parks == nil)
+      return
+    end
     @user.visited_parks.split("; ").each do |park|
       if(park != params[:remove_from_visited_parks])
         if(temp_string = '')
