@@ -13,8 +13,8 @@ class ParksController < ApplicationController
     if(params[:name] != nil)
       @park = find_by_name(params[:name])
     end
-    session[:last_park] = @park
-    @microposts = Micropost.all
+    @microposts = Micropost.find_all_by_park_id(@park.id)
+    session[:last_park] = @park.id
   end
 
   # GET /parks/new

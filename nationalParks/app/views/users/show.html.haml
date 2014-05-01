@@ -7,9 +7,6 @@
   %li
     Username:
     = current_user.username
-  %li
-    Temp park list:
-    = current_user.visited_parks
 
 %h3 Parks Visited:
 %table#visited_parks
@@ -17,7 +14,8 @@
     %tr
       %th Park Name: Location
   %tbody
-    - current_user.visited_parks.split("; ").each do |park|
-      - name = park.split(": ")
-      %tr
-        %td= link_to "#{park}", park_path(:name => name[0])
+    - if(current_user.visited_parks != nil)
+      - current_user.visited_parks.split("; ").each do |park|
+        - name = park.split(": ")
+        %tr
+          %td= link_to "#{park}", park_path(:name => name[0])

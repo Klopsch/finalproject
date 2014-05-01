@@ -10,9 +10,9 @@ describe "Parks" do
     visit '/parks'
    	expect(page).to have_content('Parkname')
   end
-  it "should have the content 'Microposts' " do
+  it "should have the content 'Info' " do
     visit '/parks'
-   	expect(page).to have_content('Microposts')
+   	expect(page).to have_content('Info')
   end
   end
 end
