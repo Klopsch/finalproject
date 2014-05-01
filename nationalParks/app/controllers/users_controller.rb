@@ -3,10 +3,12 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    if(params[:add_to_visited_parks] != nil)
-      add
-    elsif(params[:remove_from_visited_parks] != nil)
-      remove
+    if(@user == current_user)
+      if(params[:add_to_visited_parks] != nil)
+        add
+      elsif(params[:remove_from_visited_parks] != nil)
+        remove
+      end
     end
   end
 
