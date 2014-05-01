@@ -45,9 +45,15 @@
     %tr
      %td= post.content
      %td= username[0]
-%ul#line
+%ul#lines
 
 %ul#newpost
  = link_to 'Add new post', new_micropost_path, id: "newPost"
+
+%ul#lines
+ %h3#posttitle Map
+ %ul#lines
+ %td#img 
+ = image_tag avatar_url(@park), :align => "middle"
 
 
