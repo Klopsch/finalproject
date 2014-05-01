@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe Micropost do
   it "has a valid factory" do
-    FactoryGirl.create(:micropost).should be_valid
+    FactoryGirl.build(:micropost).should_not be_valid
   end
   it "is invalid without content" do
   	FactoryGirl.build(:micropost, content: nil).should_not be_valid
