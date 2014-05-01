@@ -17,7 +17,6 @@ ActiveRecord::Schema.define(version: 20140430231535) do
     t.string   "content"
     t.integer  "park_id"
     t.string   "user"
-    t.string   "tag"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

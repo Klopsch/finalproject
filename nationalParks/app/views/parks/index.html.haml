@@ -6,6 +6,7 @@
       %th Parkname
       %th Location
       %th Info
+      %th User Posts
      
   %tbody
     - @parks.each do |park|
@@ -13,6 +14,7 @@
         %td= park.parkname
         %td= park.location
         %td= link_to "More about #{park.parkname}", park_path(park)
+        %td= link_to "User posts for #{park.parkname}",park_path(park)
         / %td= link_to 'Show', park
         / %td= link_to 'Edit', edit_park_path(park)
         / %td= link_to 'Destroy', park, :method => :delete, :data => { :confirm => 'Are you sure?' }
