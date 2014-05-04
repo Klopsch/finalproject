@@ -1,0 +1,10 @@
+Alice Chien
+Sarah LaCoste
+Samuel Klopsch
+This is the final project for the Software Engineering Methods and Tools class. We are creating an app for national parks across Colorado.
+
+We completed everything our proposal stated we would have including three models, users, parks, and microposts.
+
+As an extra, we were able to add a background picture to our app and add a map to each of the parks to help users navigate when they're at the park.
+
+We used Bootstrap in this application have tested it with Cucumber and Rspec.
