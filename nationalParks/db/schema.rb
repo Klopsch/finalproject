@@ -11,12 +11,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140430231535) do
+ActiveRecord::Schema.define(version: 20140501003542) do
 
   create_table "microposts", force: true do |t|
     t.string   "content"
     t.integer  "park_id"
     t.string   "user"
+    t.string   "tag"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -27,6 +28,7 @@ ActiveRecord::Schema.define(version: 20140430231535) do
     t.string   "info"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "avatar"
   end
 
   create_table "taggings", force: true do |t|
