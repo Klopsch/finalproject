@@ -12,9 +12,8 @@ Creation of an account
 Logging into an account
 A user profile where you can view past parks you've visited
 The ability to edit the profile and add other parks
+The ability to tag catagories of the posts
 
 We completed everything our proposal stated we would have including three models, users, parks, and microposts.
-
-As for extras, we will be implementing a search functionality, the ability to rate the parks, and the ability to tag the catagories of the posts.
 
 We used Bootstrap in this application and will continue to test it using Cucumber and Rspec.

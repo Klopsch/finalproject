@@ -13,6 +13,6 @@ Scenario: view profile
 	And I press "Sign up"
 	Then I should be on the home page
 	And I should see "Welcome! You have signed up successfully."
-	Then I follow "View Profile"
-	And I should see "User Profile"
-	And I should see "Add park"
+	Then I follow "View profile"
+	And I should see "Profile"
+	And I should see "Parks Visited"

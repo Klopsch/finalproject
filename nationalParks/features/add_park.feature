@@ -12,10 +12,7 @@ Scenario: add park
 	And I fill in "Password confirmation" with "password"
 	And I press "Sign up"
 	Then I should be on the home page
+
 	And I should see "Welcome! You have signed up successfully."
-	Then I follow "View Profile"
-	And I should see "User Profile"
-	Then I follow "Add park"
-	And I should see "Park List"
-	Then I follow "Add park"
-	And I should see "Park added"
+	And I follow "View profile"
+	And I should see "Parks Visited"
