@@ -41,7 +41,7 @@
    %th User
    %th Tag
  %tbody
-  - @microposts.each do |post|
+  - @microposts.reverse.each do |post|
    - username = User.find(post.user).email.split("@")[0]
    %tr
     %td= post.content
